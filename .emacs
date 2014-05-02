@@ -9,7 +9,6 @@
  '(cua-mode t nil (cua-base))
  '(cua-virtual-rectangle-edges t)
  '(custom-enabled-themes (quote (tango-dark)))
- '(desktop-save-mode t)
  '(electric-pair-mode t)
  '(global-auto-complete-mode t)
  '(global-linum-mode t)
@@ -27,6 +26,8 @@
  ;; If there is more than one, they won't work right.
  )
 
+(add-to-list 'load-path "~/.emacs.d/packages/")
+
 ;; Markdown mode
 (autoload 'markdown-mode "markdown-mode"
    "Major mode for editing Markdown files" t)
@@ -37,11 +38,23 @@
 ;; Get rid of startup screen
 (setq inhibit-startup-screen t)
 
+;; Make the cursor look like a bar
+(set-default 'cursor-type 'bar)
+
+;; Aditional repositories
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
 ;; Auto-complete
 (add-to-list 'load-path "~/.emacs.d/")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
 (ac-config-default)
+
+;; Proxy configuration
+;; (setq url-proxy-services '(("no_proxy" . "localhost")
+;;                            ("http" . "10.10.10.11:8080")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                       Common Keys Mappings                        ;;
@@ -59,7 +72,8 @@
 (global-set-key "\C-s" 'save-buffer)
 (global-set-key "\C-w" 'kill-this-buffer)
 
-(define-key global-map (kbd "RET") 'newline-and-indent) ; For programming language modes
+;; For programming language modes
+(define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; Buffer switching
 (global-set-key [C-tab] 'next-buffer)
@@ -72,4 +86,3 @@
 (global-set-key (kbd "M-4") 'delete-window)
 (global-set-key (kbd "M-|") 'other-window)
 (global-set-key (kbd "M-f") 'query-replace)
-(put 'upcase-region 'disabled nil)
