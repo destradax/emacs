@@ -86,3 +86,4 @@
 (global-set-key (kbd "M-4") 'delete-window)
 (global-set-key (kbd "M-|") 'other-window)
 (global-set-key (kbd "M-f") 'query-replace)
+(global-set-key (kbd "M-t") 'speedbar)
