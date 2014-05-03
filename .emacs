@@ -13,12 +13,15 @@
  '(global-auto-complete-mode t)
  '(global-linum-mode t)
  '(global-visual-line-mode nil)
+ '(ido-enable-flex-matching t)
+ '(ido-mode (quote both) nil (ido))
  '(kill-whole-line t)
  '(make-backup-files nil)
  '(recentf-mode t)
  '(show-paren-mode t)
  '(tab-width 2)
- '(tool-bar-mode nil))
+ '(tool-bar-mode nil)
+ '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -27,6 +30,9 @@
  )
 
 (add-to-list 'load-path "~/.emacs.d/packages/")
+
+;; Show completions on commands
+(icomplete-mode 1)
 
 ;; Markdown mode
 (autoload 'markdown-mode "markdown-mode"
@@ -62,6 +68,7 @@
 
 (global-set-key [M-f4] 'save-buffers-kill-emacs)
 (global-set-key "\C-a" 'mark-whole-buffer)
+(global-set-key "\C-b" 'ido-switch-buffer)
 (global-set-key "\C-d" 'kill-whole-line)
 (global-set-key "\C-f" 'isearch-forward)
 (define-key isearch-mode-map "\C-f" 'isearch-repeat-forward)
