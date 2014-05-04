@@ -58,6 +58,9 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
 (ac-config-default)
 
+;; Always prompt only for y or n instead of yes or no
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; Proxy configuration
 ;; (setq url-proxy-services '(("no_proxy" . "localhost")
 ;;                            ("http" . "10.10.10.11:8080")))
