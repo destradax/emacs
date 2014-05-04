@@ -78,25 +78,25 @@
 ;;                       Common Keys Mappings                        ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(global-set-key [M-f4] 'save-buffers-kill-emacs)
-(global-set-key "\C-a" 'mark-whole-buffer)
-(global-set-key "\C-b" 'ido-switch-buffer)
-(global-set-key "\C-d" 'kill-whole-line)
-(global-set-key "\C-f" 'isearch-forward)
+(global-set-key (kbd "M-<f4>") 'save-buffers-kill-emacs)
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+(global-set-key (kbd "C-b") 'ido-switch-buffer)
+(global-set-key (kbd "C-d") 'kill-whole-line)
+(global-set-key (kbd "C-f") 'isearch-forward)
 (define-key isearch-mode-map "\C-f" 'isearch-repeat-forward)
-(global-set-key "\C-l" 'goto-line)
-(global-set-key "\C-n" 'find-file)
-(global-set-key "\C-o" 'find-file)
-(global-set-key "\C-p" 'execute-extended-command)
-(global-set-key "\C-s" 'save-buffer)
-(global-set-key "\C-w" 'kill-this-buffer)
+(global-set-key (kbd "C-l") 'goto-line)
+(global-set-key (kbd "C-n") 'find-file)
+(global-set-key (kbd "C-o") 'find-file)
+(global-set-key (kbd "C-p") 'execute-extended-command)
+(global-set-key (kbd "C-s") 'save-buffer)
+(global-set-key (kbd "C-w") 'kill-this-buffer)
 
 ;; For programming language modes
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; Buffer switching
-(global-set-key [C-tab] 'next-buffer)
-(global-set-key [C-S-tab] 'previous-buffer)
+(global-set-key (kbd "C-<tab>") 'next-buffer)
+(global-set-key (kbd "C-S-<tab>") 'previous-buffer)
 
 ;; Window management
 (global-set-key (kbd "M-1") 'delete-other-windows)
