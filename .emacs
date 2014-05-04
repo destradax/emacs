@@ -61,6 +61,12 @@
 ;; Always prompt only for y or n instead of yes or no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Yasnippets
+(add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20140427.1224")
+(require 'yasnippet)
+(yas-global-mode 1)
+(add-to-list 'auto-mode-alist '("\\.yasnippet\\'" . snippet-mode))
+
 ;; Proxy configuration
 ;; (setq url-proxy-services '(("no_proxy" . "localhost")
 ;;                            ("http" . "10.10.10.11:8080")))
@@ -93,7 +99,7 @@
 (global-set-key (kbd "M-1") 'delete-other-windows)
 (global-set-key (kbd "M-2") 'split-window-right)
 (global-set-key (kbd "M-3") 'split-window-below)
-(global-set-key (kbd "M-4") 'delete-window)
+(global-set-key (kbd "M-w") 'delete-window)
 (global-set-key (kbd "M-|") 'other-window)
 (global-set-key (kbd "M-f") 'query-replace)
 (global-set-key (kbd "M-t") 'speedbar)
