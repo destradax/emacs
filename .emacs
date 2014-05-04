@@ -106,3 +106,12 @@
 (global-set-key (kbd "M-|") 'other-window)
 (global-set-key (kbd "M-f") 'query-replace)
 (global-set-key (kbd "M-t") 'speedbar)
+
+;; Surrounds
+(global-set-key (kbd "M-[") 'insert-pair)
+(global-set-key (kbd "M-{") 'insert-pair)
+(global-set-key (kbd "M-\"") 'insert-pair)
+(global-set-key (kbd "M-\'") 'insert-pair)
+(global-set-key (kbd "M-)") 'delete-pair)
+(global-set-key (kbd "M-]") 'delete-pair)
+(global-set-key (kbd "M-}") 'delete-pair)
