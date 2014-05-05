@@ -22,6 +22,7 @@
  '(show-paren-mode t)
  '(standard-indent 2)
  '(tab-always-indent nil)
+ '(tab-stop-list (quote (2 4 6 8 10)))
  '(tab-width 2)
  '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
