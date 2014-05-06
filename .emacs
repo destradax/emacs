@@ -4,7 +4,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-save-default nil)
+ '(backward-delete-char-untabify-method nil)
  '(column-number-mode t)
+ '(css-indent-offset 2)
  '(cua-keep-region-after-copy t)
  '(cua-mode t nil (cua-base))
  '(cua-virtual-rectangle-edges t)
@@ -19,6 +21,8 @@
  '(kill-whole-line t)
  '(make-backup-files nil)
  '(recentf-mode t)
+ '(ruby-indent-tabs-mode t)
+ '(sh-basic-offset 2)
  '(show-paren-mode t)
  '(standard-indent 2)
  '(tab-always-indent nil)
