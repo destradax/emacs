@@ -24,6 +24,8 @@
  '(ruby-indent-tabs-mode t)
  '(sh-basic-offset 2)
  '(show-paren-mode t)
+ '(speedbar-show-unknown-files t)
+ '(speedbar-use-images nil)
  '(standard-indent 2)
  '(tab-always-indent nil)
  '(tab-stop-list (quote (2 4 6 8 10)))
@@ -95,6 +97,7 @@
 (global-set-key (kbd "C-p") 'execute-extended-command)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-w") 'kill-this-buffer)
+(global-set-key (kbd "C-S-w") 'kill-some-buffers)
 
 ;; For programming language modes
 (define-key global-map (kbd "RET") 'newline-and-indent)
