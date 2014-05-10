@@ -90,14 +90,17 @@
 (global-set-key (kbd "C-b") 'ido-switch-buffer)
 (global-set-key (kbd "C-d") 'kill-whole-line)
 (global-set-key (kbd "C-f") 'isearch-forward)
-(define-key isearch-mode-map "\C-f" 'isearch-repeat-forward)
+(define-key isearch-mode-map (kbd "C-f") 'isearch-repeat-forward)
 (global-set-key (kbd "C-l") 'goto-line)
 (global-set-key (kbd "C-n") 'find-file)
 (global-set-key (kbd "C-o") 'find-file)
 (global-set-key (kbd "C-p") 'execute-extended-command)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-w") 'kill-this-buffer)
+
 (global-set-key (kbd "C-S-w") 'kill-some-buffers)
+
+(global-set-key (kbd "C-<SPC>") 'er/expand-region)
 
 ;; For programming language modes
 (define-key global-map (kbd "RET") 'newline-and-indent)
